@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+</head>
+
+<body>
+
+    <script>
+        const matrix = [
+            [3, 6, 9],
+            [2, 5, 8],
+            [1, 4, 7]
+        ];
+
+        const findMaxAndMin = (matrix) => {
+            if (matrix.length === 0) {
+                return null;
+            }
+
+            let max = matrix[0][0]; 
+            let min = matrix[0][0];
+
+            
+            for (let i = 0; i < matrix.length; i++) {
+                for (let j = 0; j < matrix[i].length; j++) {
+                    const val = matrix[i][j];
+                    if (val > max) {
+                        max = val;
+                    }
+                    if (val < min) {
+                        min = val;
+                    }
+                }
+            }
+
+            return { max, min };
+        };
+
+        
+
+        const result = findMaxAndMin(matrix);
+        console.log(result);
+
+    </script>
+</body>
+
+</html>
